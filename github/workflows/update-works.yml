@@ -1,0 +1,21 @@
+name: Auto Update Aozora Works
+
+on:
+  schedule:
+    - cron: '1 16 * * *'  # 毎日 1:00 JST（UTC 16:00）に実行
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with: { fetch-depth: 0 }
+      - uses: actions/setup-python@v4
+        with: { python-version: '3.x' }
+      - run: pip install requests lxml
+      - run: python3 scripts/update_works.py
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add works.json works/*.html
+          git diff --staged --quiet || (git commit -m "Auto-update works list" && git push)
