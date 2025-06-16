@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"/>
+  <title>青空文庫リーダー</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <h1>青空文庫リーダー</h1>
+  </header>
+  <main>
+    <aside id="sidebar">
+      <input type="text" id="search" placeholder="作品名／作者名で検索…"/>
+      <div class="filters">
+        <button id="filter-new">新着のみ</button>
+        <button id="filter-popular">人気順</button>
+        <select id="filter-initial">
+          <option value="">— 頭文字 —</option>
+          <option value="あ">あ行</option>
+          <option value="か">か行</option>
+          <option value="さ">さ行</option>
+          <!-- 他の行も必要に応じて -->
+        </select>
+        <button id="filter-history">閲覧履歴</button>
+      </div>
+      <ul id="list"></ul>
+    </aside>
+    <section id="reader">
+      <p>作品を選んでください</p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
