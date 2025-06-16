@@ -1,0 +1,21 @@
+{
+  "works": [
+    {
+      "title": "こころ",
+      "author": "夏目漱石",
+      "url": "works/1234.html",
+      "dateAdded": "2025-06-15",
+      "viewCount": 0,
+      "initial": "こ"
+    },
+    {
+      "title": "走れメロス",
+      "author": "太宰治",
+      "url": "works/5678.html",
+      "dateAdded": "2025-06-16",
+      "viewCount": 0,
+      "initial": "は"
+    }
+    // …さらに自動更新で追加される
+  ]
+}
